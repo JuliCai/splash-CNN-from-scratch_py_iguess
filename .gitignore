@@ -1,0 +1,17 @@
+# The Meme-10 data is NOT published: the memes belong to the people who made them and some show
+# real people, including a minor. Share it privately (see README.md); only the dataset card is tracked.
+data/*
+!data/README.md
+meme10-data.zip
+
+# made while working
+src/weights/my_lenet.json
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# local tooling
+.venv/
+docs/superpowers/
+

@@ -1,0 +1,3 @@
+# Data pipeline only (scraping, curation helpers, synthesis). The neural network itself uses no libraries.
+numpy>=1.22
+Pillow>=10.1
