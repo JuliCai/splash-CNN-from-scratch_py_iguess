@@ -39,6 +39,21 @@ Put `%load solutions/NAME.py` in the cell and run it twice.
 To see the interactive overview, run `python3 -m http.server 9997 --directory src/web` and open
 http://localhost:9997.
 
+## Train the model
+
+With the dataset unzipped into `data/` (get `meme10-data.zip` from your teacher), train from `src/`:
+
+```bash
+cd src
+python3 train.py --per-class 350 --epochs 4
+```
+
+That trains one image at a time with plain SGD and cosine annealing, prints validation accuracy each epoch,
+then evaluates on the 150 real test memes and saves the weights to `src/weights/my_lenet.json`.
+Use `--per-class 100` for a ~2 minute run, `--per-class 0` for all 35,000 images (~46 min),
+`--load weights/lenet_meme10.json --epochs 0` to just evaluate the pretrained model,
+or `MEME10_DATA=/path/to/data` if the dataset lives elsewhere.
+
 ## Results
 
 Measured with the lab's own code (one image per step, plain SGD, cosine learning rate) on an Apple M5 Pro:
