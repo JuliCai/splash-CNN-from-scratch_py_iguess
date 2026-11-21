@@ -1,0 +1,6 @@
+# Notebook outputs that contain pictures (memes, feature maps) are stripped when you commit, so they never
+# reach GitHub. Your local notebooks keep them. Turn this on in a fresh clone with:
+#   git config filter.strip-images.clean "python3 src/tools/strip_image_outputs.py"
+#   git config filter.strip-images.smudge cat
+#   git config filter.strip-images.required true
+*.ipynb filter=strip-images
